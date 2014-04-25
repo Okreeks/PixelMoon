@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4A0B288D-601A-49A5-91A2-BE31B681E94B}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PixelMoon</RootNamespace>
+    <AssemblyName>PixelMoon</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidSupportedAbis>armeabi-v7a%3bx86</AndroidSupportedAbis>
+    <AndroidStoreUncompressedFileExtensions />
+    <MandroidI18n />
+    <TargetFrameworkVersion>v2.3</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;ANDROID</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;ANDROID</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="OpenTK" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\Android\MonoGame.Framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activity1.cs" />
+    <Compile Include="ContentLoader.cs" />
+    <Compile Include="Fade.cs" />
+    <Compile Include="Game1.cs" />
+    <Compile Include="levels\Builder.cs" />
+    <Compile Include="levels\Intro.cs" />
+    <Compile Include="levels\Launcher.cs" />
+    <Compile Include="levels\Menu.cs" />
+    <Compile Include="levels\Options.cs" />
+    <Compile Include="levels\Outro.cs" />
+    <Compile Include="levels\Slider.cs" />
+    <Compile Include="particleEngine\Particle.cs" />
+    <Compile Include="particleEngine\ParticleEngine.cs" />
+    <Compile Include="parts\Capsule.cs" />
+    <Compile Include="parts\Engine.cs" />
+    <Compile Include="parts\Part.cs" />
+    <Compile Include="parts\Tank.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\spriteFont1.xnb" />
+    <AndroidAsset Include="Assets\Content\pixelmix.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Layout\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\Splash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Styles.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\sprites\buttons\optionsButton.png" />
+    <AndroidAsset Include="Assets\Content\sprites\buttons\quitButton.png" />
+    <AndroidAsset Include="Assets\Content\sprites\buttons\startButton.png" />
+    <AndroidAsset Include="Assets\Content\sprites\effects\cloud1_dev.png" />
+    <AndroidAsset Include="Assets\Content\sprites\effects\cloud2_dev.png" />
+    <AndroidAsset Include="Assets\Content\sprites\backgrounds\LoadingScreenBG.png" />
+    <AndroidAsset Include="Assets\Content\sprites\backgrounds\menuBG.png" />
+    <AndroidAsset Include="Assets\Content\sprites\global\moonAndStars.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\sprites\global\moon.png" />
+    <AndroidAsset Include="Assets\Content\sprites\global\reachingHand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\sprites\global\isToReachTheMoon.png" />
+    <AndroidAsset Include="Assets\Content\sprites\global\allIDreamOff.png" />
+    <AndroidAsset Include="Assets\Content\sprites\buttons\button_closeBuilder.png" />
+    <AndroidAsset Include="Assets\Content\sprites\buttons\button_launchRocket.png" />
+    <AndroidAsset Include="Assets\Content\sprites\buttons\button_showFormulas.png" />
+    <AndroidAsset Include="Assets\Content\sprites\buttons\slideOut.png" />
+    <AndroidAsset Include="Assets\Content\sprites\backgrounds\slider.png" />
+    <AndroidAsset Include="Assets\Content\sprites\parts\capsules\test.png" />
+    <AndroidAsset Include="Assets\Content\sprites\parts\capsules\capsule_1.png" />
+    <AndroidAsset Include="Assets\Content\sprites\parts\engines\engine_1.png" />
+    <AndroidAsset Include="Assets\Content\sprites\parts\tanks\tank_1.png" />
+    <AndroidAsset Include="Assets\Content\sprites\buttons\12065738771352376078Arnoud999_Right_or_wrong_5.svg.hi.png" />
+    <AndroidAsset Include="Assets\Content\sprites\global\grid.png" />
+    <AndroidAsset Include="Assets\Content\sprites\buttons\button_refreshBuilder.png" />
+    <AndroidAsset Include="Assets\Content\sprites\parts\engines\engine_fairing.png" />
+    <AndroidAsset Include="Assets\Content\sprites\backgrounds\launcherBG.png" />
+    <AndroidAsset Include="Assets\Content\sprites\effects\diamond.png" />
+    <AndroidAsset Include="Assets\Content\sprites\buttons\throttleHandle.png" />
+    <AndroidAsset Include="Assets\Content\sprites\buttons\throttleStation.png" />
+    <AndroidAsset Include="Assets\Content\sprites\effects\aDream.png" />
+    <AndroidAsset Include="Assets\Content\sprites\effects\AsIGotCloser.png" />
+    <AndroidAsset Include="Assets\Content\sprites\effects\iFeltSomethingStrange.png" />
+    <AndroidAsset Include="Assets\Content\sprites\effects\iWokeUp.png" />
+    <AndroidAsset Include="Assets\Content\sprites\effects\sheStillRemainsADream.png" />
+    <AndroidAsset Include="Assets\Content\sprites\buttons\formulas.png" />
+    <AndroidAsset Include="Assets\Content\sprites\effects\andWhenSheGotInMyReach.png" />
+    <Content Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+     Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
